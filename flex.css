@@ -63,13 +63,41 @@
 }
 
 /* Tablet Styles*/
+@media screen and (max-width: 1024px) {
+  .flex-container {
+    height: fit-content;
+  }
 
+  .quarter {
+    width: 48.5%;
+  }
 
+  .third {
+    width: 48.5%;
+    order: 2;
+  }
 
+  .third:last-of-type {
+    width: 98%;
+    order: 1;
+  }
+}
+
+/*
+  Use % instead of px to get proper measurements on all screen sizes
+  Use ordering to make sure no boxes look out of place
+  When selecting multipile things write it like it is on the mobile style, it's easier to read
+*/
 
 /* Mobile Styles*/
-
-
+@media screen and (max-width: 520px) {
+  .half,
+  .third,
+  .quarter {
+    width: 98%;
+    order: 1;
+  }
+}
 
 
 
